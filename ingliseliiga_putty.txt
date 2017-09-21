@@ -1,0 +1,59 @@
+﻿
+
+CREATE TABLE ingliseliiga(
+	klubinimi VARCHAR(30) PRIMARY KEY,
+	voidetud INT,
+	viigistatud INT,
+	kaotatud INT,
+	punktid INT
+);
+
+INSERT INTO ingliseliiga VALUES ('klubinimi', voit, viik, kaotus, punkt);
+
+INSERT INTO ingliseliiga VALUES ('Chelsea', 30, 3, 5, 93);
+INSERT INTO ingliseliiga VALUES ('Tottenham Hotspur', 26, 8, 4, 86);
+INSERT INTO ingliseliiga VALUES ('Manchester City', 23, 9, 6, 78);
+INSERT INTO ingliseliiga VALUES ('Liverpool', 22, 10, 6, 76);
+INSERT INTO ingliseliiga VALUES ('Arsenal', 23, 6, 9, 75);
+INSERT INTO ingliseliiga VALUES ('Manchester United', 18, 15, 5, 69);
+INSERT INTO ingliseliiga VALUES ('Everton', 17, 10, 11, 61);
+INSERT INTO ingliseliiga VALUES ('Southampton', 12, 10, 16, 46);
+INSERT INTO ingliseliiga VALUES ('Bournemouth', 12, 10, 16, 46);
+INSERT INTO ingliseliiga VALUES ('West Bromwich Albion', 12, 9, 17, 45);
+INSERT INTO ingliseliiga VALUES ('West Ham United', 12, 9, 17, 45);
+INSERT INTO ingliseliiga VALUES ('Leicester City', 12, 8, 18, 44);
+INSERT INTO ingliseliiga VALUES ('Stoke City', 11, 11, 16, 44);
+INSERT INTO ingliseliiga VALUES ('Crystal Palace', 12, 5, 21, 41);
+INSERT INTO ingliseliiga VALUES ('Swansea City', 12, 5, 21, 41);
+INSERT INTO ingliseliiga VALUES ('Burnley', 11, 7, 20, 40);
+INSERT INTO ingliseliiga VALUES ('Watford', 11, 7, 20, 40);
+INSERT INTO ingliseliiga VALUES ('Hull City', 9, 7, 22, 34);
+INSERT INTO ingliseliiga VALUES ('Middlesbrough', 5, 13, 20, 28);
+INSERT INTO ingliseliiga VALUES ('Sunderland', 6, 6, 26, 24);
+
+https://i.gyazo.com/8e43ad5fd4e07c5a7c88798ed6dcf2b4.png
+
+
+Kuvada klubid, mis said üle 50 punkti:
+	SELECT klubinimi, punktid FROM ingliseliiga WHERE punktid >50 ORDER BY punktid DESC;
+
+	https://i.gyazo.com/f0473d139510d92f9c44ef2a8d1663d5.png
+
+
+Keskmine saadud punktisumma:
+	SELECT AVG(punktid) FROM ingliseliiga;
+
+	https://i.gyazo.com/f61aa81ba5a4b91b345a4a45e59ea2af.png
+
+
+Järjesta punktide järgi, alustades suurimast:
+	SELECT * FROM ingliseliiga ORDER BY punktid DESC;
+
+	https://i.gyazo.com/845663703796e5da0c2c5b3df2a0125e.png
+
+
+Lahuta maksimum punktidest miinimum punktid:
+	SELECT MAX(punktid) - MIN(punktid) AS vahe FROM ingliseliiga;
+
+	https://i.gyazo.com/a37e2b882502e2a115bcf38895a0cd23.png
+
