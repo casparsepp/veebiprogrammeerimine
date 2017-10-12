@@ -52,6 +52,7 @@
 	<h1><?php echo $myName ." " .$myFamilyName; ?> </h1>
 	<p>See veebileht on loodud õppetöö raames ning ei sisalda mingisugust tõsiseltvõetavat sisu!</p>
 	<p><a href="?logout=1">Logi välja!</a></p>
+	<p><a href="userideas.php">Head mõtted</a></p>
 	<img src="<?php echo $picDir .$picFile; ?>" alt="Tallinna Ülikool">
 
 </body>
